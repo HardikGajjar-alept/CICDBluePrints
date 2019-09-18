@@ -1,4 +1,8 @@
 pool: 'Hosted VS2017'
+- task: PowerShell@2
+  inputs:
+    filePath: 'HardikGajjar-alept/CICDBluePrints / azure-pipelines.yml'
+    errorActionPreference: 'silentlyContinue'
 
 variables:
  - name: spnName
