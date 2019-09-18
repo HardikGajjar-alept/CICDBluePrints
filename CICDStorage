@@ -4,7 +4,7 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "name": "cicdstorage",
+      "name": "aleptcicdstorage",
       "location": "Central India",
       "apiVersion": "2018-07-01",
       "kind": "StorageV2",
