@@ -1,7 +1,7 @@
 steps:
 - task: AzureResourceGroupDeployment@2
   inputs:
-    azureSubscription: 'Pay-As-You-Go'
+    azureSubscription: 'HardikGajjar-alept'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'CICD'
     location: 'Central US'
