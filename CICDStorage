@@ -4,7 +4,7 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "name": "CICDStorage",
+      "name": "cicdstorage",
       "location": "Central India",
       "apiVersion": "2018-07-01",
       "kind": "StorageV2",
