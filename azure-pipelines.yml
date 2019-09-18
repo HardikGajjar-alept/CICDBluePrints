@@ -6,5 +6,5 @@ steps:
     resourceGroupName: 'CICD'
     location: 'Central US'
     templateLocation: 'Linked artifact'
-    csmFile: 'blob/master/CICDStorage'
+    csmFile: 'CICDStorage'
     deploymentMode: 'Incremental'
