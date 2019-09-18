@@ -1,7 +1,7 @@
 pool: 'Hosted VS2017'
 - task: PowerShell@2
   inputs:
-    filePath: 'https://github.com/HardikGajjar-alept/CICDBluePrints/blob/master/azure-pipelines.yml'
+    filePath: 'https://github.com/HardikGajjar-alept/CICDBluePrints/blob/master/'
     errorActionPreference: 'silentlyContinue'
 
 variables:
