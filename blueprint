@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "parameters": {
+      "[Usergrouporapplicationname]:Contributor_RoleAssignmentName": {
+        "type": "array",
+        "metadata": {
+          "displayName": "[User group or application name] ([User group or application name] : Contributor)",
+          "strongType": "PrincipalId"
+        }
+      }
+    },
+    "resourceGroups": {
+      "ResourceGroup": {
+        "name": "Demo-RG-V1",
+        "metadata": {
+          "displayName": "Demo-RG-V1"
+        },
+        "dependsOn": []
+      }
+    },
+    "targetScope": "subscription",
+    "status": {
+      "timeCreated": "2019-09-16T06:21:08+00:00",
+      "lastModified": "2019-09-16T06:21:08.8910894+00:00"
+    },
+    "description": "Demo-Blueprint-V1"
+  },
+  "type": "Microsoft.Blueprint/blueprints"
+}
