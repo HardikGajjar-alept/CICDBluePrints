@@ -6,5 +6,5 @@ steps:
     resourceGroupName: 'CICD'
     location: 'Central US'
     templateLocation: 'Linked artifact'
-    csmFile: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-storage-account-create/azuredeploy.json'
+    csmFile: 'https://github.com/HardikGajjar-alept/CICDBluePrints/blob/master/CICDStorage'
     deploymentMode: 'Incremental'
