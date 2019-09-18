@@ -1,28 +1,6 @@
 {
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
-
-  "parameters": {
-    
-    "param_mystorageaccountname": {
-      "type": "string",
-      "minLength": 5
-    },
-    "param_environment": {
-      "type": "string",
-      "defaultValue": "dev",
-      "allowedValues": [
-        "dev",
-        "test",
-        "prod"
-      ]
-    }
-  },
-
-  "variables": {
-    "mystorageaccountname": "[concat(parameters('param_mystorageaccountname'), parameters('param_environment'))]"
-  },
-
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
@@ -37,12 +15,5 @@
         "accessTier": "Hot"
       }
     }
-  ],
-
-  "outputs": {
-    "mystorageaccount": {
-      "type": "object",
-      "value": "[reference(variables('mystorageaccountname'))]"
-    }
-  }
+  ]
 }
