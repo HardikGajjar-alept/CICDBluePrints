@@ -4,7 +4,7 @@ steps:
     azureSubscription: 'CICD'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'CICD'
-    location: 'Central US'
+    location: 'Central India'
     templateLocation: 'Linked artifact'
     csmFile: 'CICDStorage'
     deploymentMode: 'Incremental'
