@@ -6,5 +6,5 @@ steps:
     resourceGroupName: 'CICD'
     location: 'Central India'
     templateLocation: 'Linked artifact'
-    csmFile: 'CICDStorage'
+    csmFile: 'blueprint'
     deploymentMode: 'Incremental'
