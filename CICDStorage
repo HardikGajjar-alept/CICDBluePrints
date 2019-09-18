@@ -5,7 +5,7 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "name": "CICDStorage",
-      "location": "West US 2",
+      "location": "Central India",
       "apiVersion": "2018-07-01",
       "kind": "StorageV2",
       "sku": {
