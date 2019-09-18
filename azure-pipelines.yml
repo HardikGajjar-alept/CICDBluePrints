@@ -1,11 +1,25 @@
 pool:
   name: Hosted Windows 2019 with VS2019
-  demands: azureps
 
 steps:
-- task: AzurePowerShell@3
+- task: AzureFileCopy@3
+  displayName: 'Stage files'
+  inputs:
+    SourcePath: 'AzureResourceGroup1'
+    azureSubscription: 'Pay-As-You-Go'
+    Destination: 'AzureBlob'
+    storage: 'stage3a4176e058d34bb88cc'
+    ContainerName: 'democontainer'
+    outputStorageUri: 'artifactsLocation'
+    outputStorageContainerSasToken: 'artifactsLocationSasToken'
+    sasTokenTimeOutInMinutes: '240'
+- task: AzureResourceGroupDeployment@2
+  displayName: 'Deploy template'
   inputs:
     azureSubscription: 'Pay-As-You-Go'
-    ScriptPath: 'https://github.com/HardikGajjar-alept/CICDBluePrints/blob/master/pipelines-scripts/build.ps1'
-    ScriptArguments: -ResourceGroupName 'demogroup' -ResourceGroupLocation 'centralus' -UploadArtifacts -ArtifactStagingDirectory '$(Build.StagingDirectory)' -StorageAccountName 'stage3a4176e058d34bb88cc'
-    azurePowerShellVersion: LatestVersion
+    resourceGroupName: demogroup
+    location: 'centralus'
+    templateLocation: 'URL of the file'
+    csmFileLink: '$(artifactsLocation)WebSite.json$(artifactsLocationSasToken)'
+    csmParametersFileLink: '$(artifactsLocation)WebSite.parameters.json$(artifactsLocationSasToken)'
+    overrideParameters: '-_artifactsLocation $(artifactsLocation) -_artifactsLocationSasToken "$(artifactsLocationSasToken)"'
